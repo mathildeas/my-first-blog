@@ -1,9 +1,11 @@
-<html>
-  <head>
-    <title>Mathildes blogg</title>
-  </head>
-  <body>
-    <p>Martin!</p>
-    <p>Se så flink jeg er!</p>
-  </body>
-</html>
+<div>
+    <h1><a href="/">Mathildes blogg</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
